@@ -1,0 +1,17 @@
+<br>
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <input name="canal" [(ngModel)]="canal" (ngModelChange)="buscaCanal()" class="col-10 form-control form-control-lg" type="text" placeholder="Digite o nome do canal">
+    </div>
+    <br>
+    <div class="container justify-content-center">
+        <ul class="row list-group list-group-flush">
+            <li class="col-12 list-group-item d-flex justify-content-between align-items-center" *ngFor="let can of canais">
+                <p class="col-3 text-uppercase font-weight-bold">{{can.snippet.title}}</p>
+                <p class="col-8 text-truncate">{{can.snippet.description}}</p>
+                <button type="button" class="btn btn-danger" [routerLink]="['canal/' + can.snippet.channelId]">Visitar</button>
+            </li>
+        </ul>
+    </div>
+</div>

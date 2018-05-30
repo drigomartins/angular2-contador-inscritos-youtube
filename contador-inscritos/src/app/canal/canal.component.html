@@ -1,0 +1,14 @@
+<br>
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12" *ngFor="let til of title">
+            <h1 class="text-center text-danger">{{til.snippet.title}}</h1>
+        </div>
+        <div class="col-12" *ngFor="let can of canal">
+            <h4 class="text-center text-black-50">Inscritos: {{can.statistics.subscriberCount}}</h4>
+        </div>
+        
+        <button type="button" class="col-2 btn btn-danger" routerLink="" style="margin-top: 50px">Voltar</button>
+    </div>
+</div>
